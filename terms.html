@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>BUTH SKL Staatliche Lotterie Einnahme</title>
+        <link rel="shortcut icon" href="images/Fav-icon.png" type="image/x-icon">
+        
+        <meta name="description" content="Offizielle SKL Lotterie Einnahme – BUTH SKL bietet Ihnen die besten Gewinnchancen. Spielen Sie sicher und seriös mit der staatlich lizenzierten Lotterie.">
+        <meta name="keywords" content="SKL Lotterie, Staatliche Lotterie, Gewinnspiele, Lotterie Deutschland, SKL Gewinn, Lotterie Teilnahme">
+        <meta name="author" content="BUTH SKL Staatliche Lotterie Einnahme">
+        
+        <meta property="og:title" content="BUTH SKL Staatliche Lotterie Einnahme">
+        <meta property="og:description" content="Spielen Sie mit der offiziellen SKL Lotterie und nutzen Sie Ihre Chance auf hohe Gewinne! Staatlich lizenziert und seriös.">
+        <meta property="og:url" content="https://skl-lotterie-buth.de">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://skl-lotterie-buth.de/images/lotterie-banner.png">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="BUTH SKL Staatliche Lotterie Einnahme">
+        <meta name="twitter:description" content="Die beste Wahl für SKL Lotterie-Fans – Spielen Sie sicher und gewinnen Sie groß!">
+        <meta name="twitter:image" content="https://skl-lotterie-buth.de/images/lotterie-banner.png">
+        
+        <link rel="canonical" href="https://skl-lotterie-buth.de">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="skl-disclaimer">
+                <p><img src="images/disclaimer-icon.png" alt="Age Disclaimer">Diese Plattform ist ausschließlich für Personen ab 18 Jahren zugänglich. Spielen Sie mit Verantwortung – Glücksspiele können süchtig machen.</p>
+            </div>
+            <div class="sk-menu-bar">
+                <div class="container">
+                    <div class="skl-menu-flex">
+                        <div class="skl-logo">
+                            <a href="/">
+                                <img src="images/buth-skl-logo.png" alt="BUTH SKL Staatliche Lotterie Einnahme Logo">
+                                <img src="images/skl-red-logo.png" alt="Staatliche Lotterie Einnahme Logo" class="skl-header-logo-two">
+                            </a>
+                        </div>
+                        <div class="skl-header-buttons">
+                            <a>
+                                <button class="skl-login-btn" onclick="openLoginPopup()">Anmelden</button>
+                            </a>
+                            <a>
+                                <button class="skl-register-btn" onclick="openRegisterPopup()">Registrieren</button>
+                            </a>                        
+                        </div>
+                        <div class="skl-hamburger" id="hamburger-menu">
+                            <img src="images/toggle-bar.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="registerPopup" class="popup-container">
+                        <div class="popup">
+                            <div class="popup-left"></div>
+                            <div class="popup-right">
+                                <span class="close-button" onclick="closeRegisterPopup()">&times;</span>
+                                <div class="popup-logo">
+                                    <img src="images/buth-skl-logo.png" alt="BUTH SKL Staatliche Lotterie Einnahme Logo">
+                                </div>
+                                <h2>Konto Registrieren</h2>
+                                <p>Schließen Sie sich tausenden Nutzern weltweit an</p>
+                                <form id="registerForm">
+                                    <label>Vollständiger Name</label>
+                                    <input type="text" id="fullName" required>
+                    
+                                    <label>E-Mail-Adresse</label>
+                                    <input type="email" id="email" required>
+                    
+                                    <label>Passwort</label>
+                                    <input type="password" id="password" required>
+                                    <p class="password-info">Verwenden Sie mindestens 8 Zeichen mit einer Mischung aus Buchstaben, Zahlen & Symbolen</p>
+                    
+                                    <label>Passwort bestätigen</label>
+                                    <input type="password" id="confirmPassword" required>
+                    
+                                    <div class="ckeckbox-top-area">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="ageConfirm" required> Ich bestätige, dass ich mindestens 18 Jahre alt bin
+                                        </label>
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="termsConfirm" required> Ich stimme den Nutzungsbedingungen und der Datenschutzrichtlinie zu
+                                        </label>
+                                    </div>
+                    
+                                    <button type="submit" class="register-btn">JETZT REGISTRIEREN</button>
+                                </form>
+                                <p class="have-account">Sie haben bereits ein Konto? <a href="#" onclick="openLoginPopup()">Einloggen</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loginPopup" class="popup-container">
+                        <div class="popup">
+                            <div class="popup-left-login"></div>
+                            <div class="popup-right">
+                                <span class="close-button" onclick="closeLoginPopup()">&times;</span>
+                                <div class="popup-logo">
+                                    <img src="images/buth-skl-logo.png" alt="BUTH SKL Staatliche Lotterie Einnahme Logo">
+                                </div>
+                                <h2>In Ihr Konto einloggen</h2>
+                                <p>Schließen Sie sich tausenden Nutzern weltweit an</p>
+                                <form id="loginForm">
+                                    <label>E-Mail-Adresse</label>
+                                    <input type="email" id="loginEmail" required>
+                    
+                                    <label>Passwort</label>
+                                    <input type="password" id="loginPassword" required>
+                    
+                                    <button type="submit" class="register-btn">LOGIN</button>
+                                </form>
+                                <p class="have-account"><a href="#" onclick="openForgotPasswordPopup()">Passwort vergessen?</a></p>
+                                <p class="have-account">Noch kein Konto? <a href="#" onclick="openRegisterPopup()">Registrieren</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="forgotPasswordPopup" class="popup-container">
+                        <div class="popup">
+                            <div class="popup-left-login"></div>
+                            <div class="popup-right">
+                                <span class="close-button" onclick="closeForgotPasswordPopup()">&times;</span>
+                                <div class="popup-logo">
+                                    <img src="images/buth-skl-logo.png" alt="BUTH SKL Staatliche Lotterie Einnahme Logo">
+                                </div>
+                                <h2>Passwort Zurücksetzen</h2>
+                                <p>Geben Sie Ihre E-Mail-Adresse ein, um einen Zurücksetzungslink zu erhalten</p>
+                                <form id="forgotPasswordForm">
+                                    <label>E-Mail-Adresse</label>
+                                    <input type="email" id="forgotPasswordEmail" required>
+                    
+                                    <button type="submit" class="register-btn">ZURÜCKSETZUNGS-LINK SENDEN</button>
+                                </form>
+                                <p class="have-account"><a href="#" onclick="openLoginPopup()">Zurück zum Login</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        .popup-container {
+                            display: none;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.829);
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 9999999;
+                        }
+                        .popup {
+                            display: flex;
+                            width: 1150px;
+                            background: #fff;
+                            border-radius: 8px;
+                            overflow: hidden;
+                        }
+                        .popup-left {
+                            width: 50%;
+                            background: url('images/registration-popup-background.png') center/cover;
+                            background-position: center;
+                        }
+                        .popup-left-login {
+                            width: 50%;
+                            background: url('images/login-popup-background.png') center/cover;
+                            min-height: 550px;
+                        }
+                        .popup-right {
+                            width: 50%;
+                            padding: 80px;
+                            text-align: left;
+                            background-image: url('images/pink-background.png');
+                        }
+                        .popup-logo{
+                            text-align: center;
+                        }
+                        .popup-logo > img{
+                            width: 120px;
+                        }
+                        .popup-right h2 {
+                            color: #0C0C0C;
+                            font-size: 30px;
+                            font-weight: 600;
+                            padding-top: 12px;
+                            text-align: center;
+                        }
+                        .popup-right p {
+                            color: #0C0C0C;
+                            font-size: 17px;
+                            font-weight: 400;
+                            padding-bottom: 12px;
+                            text-align: center;
+                        }
+                        p.password-info {
+                            color: #F1201E;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            padding: 0px;
+                            text-align: left;
+                        }
+                        .close-button {
+                            font-size: 32px;
+                            color: #333333;
+                            float: inline-end;
+                            cursor: pointer;
+                            font-weight: 600;
+                            position: relative;
+                            left: 50px;
+                            top: -15px;
+                        }
+                        .close-button:hover {
+                            color: red;
+                        }
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        label {
+                            margin-top: 12px;
+                            color: #0C0C0C;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                        input {
+                            width: 100%;
+                            padding: 6px 8px;
+                            margin-top: 1px;
+                            border-radius: 4px;
+                            background: #ffffff;
+                            border: 1px solid #80808042;
+                            outline: none;
+                            font-size: 16px;
+                        }
+                        label.checkbox-container {
+                            display: flex;
+                            align-items: baseline;
+                            gap: 4px;
+                        }
+                        input[type="checkbox"] {
+                            width: 22px;
+                            position: relative;
+                            top: 2px;
+                        }
+                        .checkbox-container {
+                            color: #0C0C0C;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+                        .ckeckbox-top-area {
+                            padding-top: 12px;
+                        }
+                        button.register-btn {
+                            border-radius: 35px;
+                            background: #CD1719;
+                            padding: 7px;
+                            margin-top: 15px;
+                            cursor: pointer;
+                            border: none;
+                            color: #FFF;
+                            font-size: 17px;
+                            font-weight: 500;
+                            letter-spacing: 1.15px;
+                            margin-top: 20px;
+                        }
+                        button.register-btn:hover {
+                            background: #bd0e11;;
+                        }
+                        p.have-account {
+                            color: #0C0C0C;
+                            font-size: 16px;
+                            text-align: center;
+                            padding-top: 25px;
+                        }
+                        .have-account > a {
+                            color: #F1201E;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                        @media (max-width: 768px) {
+                            .popup {
+                                flex-direction: column;
+                                width: 90%;
+                                overflow: scroll;
+                            }
+        
+                            .popup-left,
+                            .popup-left-login {
+                                display: none;
+                            }
+        
+                            .popup-right {
+                                width: 100%;
+                            }
+                            .popup-right h2 {
+                                font-size: 32px;
+                                line-height: normal;
+                                padding-top: 15px;
+                            }
+                            button.register-btn {
+                                margin-top: 10px;
+                            }
+                            p.have-account {
+                                padding: 15px 0px 0px 0px;
+                            }
+                            .popup-right {
+                                padding: 30px 20px;
+                            }
+                            .close-button {
+                                left: 0px;
+                            }
+                        }
+                    </style>
+                    <script>
+                        function openRegisterPopup() {
+                            closeAllPopups();
+                            document.getElementById("registerPopup").style.display = "flex";
+                        }
+                    
+                        function closeRegisterPopup() {
+                            document.getElementById("registerPopup").style.display = "none";
+                        }
+                    
+                        function openLoginPopup() {
+                            closeAllPopups();
+                            document.getElementById("loginPopup").style.display = "flex";
+                        }
+                    
+                        function closeLoginPopup() {
+                            document.getElementById("loginPopup").style.display = "none";
+                        }
+                    
+                        function openForgotPasswordPopup() {
+                            closeAllPopups();
+                            document.getElementById("forgotPasswordPopup").style.display = "flex";
+                        }
+                    
+                        function closeForgotPasswordPopup() {
+                            document.getElementById("forgotPasswordPopup").style.display = "none";
+                        }
+                    
+                        function closeAllPopups() {
+                            document.getElementById("registerPopup").style.display = "none";
+                            document.getElementById("loginPopup").style.display = "none";
+                            document.getElementById("forgotPasswordPopup").style.display = "none";
+                        }
+                    
+                        window.onclick = function(event) {
+                            if (event.target.classList.contains("popup-container")) {
+                                closeAllPopups();
+                            }
+                        };
+                    </script>
+                </div>
+            </div>
+            <div class="skl-mobile-menu" id="mobile-menu">
+                <div class="close-btn" id="close-btn">
+                    <img src="images/close.png" alt="">
+                </div>
+                <a>
+                    <button class="skl-login-btn" onclick="openLoginPopup()">Anmelden</button>
+                </a>
+                <a>
+                    <button class="skl-register-btn" onclick="openRegisterPopup()">Registrieren</button>
+                </a>
+            </div>
+        </header>
+        <main>
+            <section class="skl-subpages-bg">
+                <div class="container">
+                    <div class="skl-subpages-text">
+                        <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+                        
+                        <h3>1. Einleitung</h3>
+                        <p>Diese Allgemeinen Geschäftsbedingungen regeln die Nutzung der Website <a href="https://skl-lotterie-buth.de">skl-lotterie-buth.de</a> und die damit verbundenen Dienstleistungen. Durch den Zugriff auf unsere Website und die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu.</p>
+                    
+                        <h3>2. Definitionen</h3>
+                        <ul>
+                            <li><strong>Betreiber:</strong> BUTH SKL Staatliche Lotterie Einnahme</li>
+                            <li><strong>Nutzer:</strong> Jede natürliche oder juristische Person, die unsere Website besucht oder unsere Dienste nutzt</li>
+                            <li><strong>Dienste:</strong> Bereitstellung von Informationen über Lotterien und ggf. Vermittlung von Lottoscheinen</li>
+                        </ul>
+                    
+                        <h3>3. Teilnahmevoraussetzungen</h3>
+                        <p>Die Nutzung unserer Dienste ist nur Personen gestattet, die mindestens 18 Jahre alt sind und die gesetzlichen Voraussetzungen für die Teilnahme an Lotterien erfüllen.</p>
+                    
+                        <h3>4. Nutzung der Website</h3>
+                        <ul>
+                            <li>Die Nutzung der Website erfolgt auf eigenes Risiko.</li>
+                            <li>Es ist untersagt, die Website für illegale oder missbräuchliche Zwecke zu verwenden.</li>
+                            <li>Der Betreiber übernimmt keine Haftung für die Richtigkeit oder Vollständigkeit der bereitgestellten Informationen.</li>
+                        </ul>
+                    
+                        <h3>5. Haftungsausschluss</h3>
+                        <p>Der Betreiber haftet nicht für direkte oder indirekte Schäden, die durch die Nutzung der Website entstehen, einschließlich, aber nicht beschränkt auf technische Fehler, Ausfälle oder ungenaue Informationen.</p>
+                    
+                        <h3>6. Geistiges Eigentum</h3>
+                        <p>Alle Inhalte dieser Website, einschließlich Texte, Logos und Bilder, sind urheberrechtlich geschützt und dürfen ohne vorherige Genehmigung nicht vervielfältigt oder verbreitet werden.</p>
+                    
+                        <h3>7. Änderungen der AGB</h3>
+                        <p>Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Die aktualisierten Bedingungen werden auf der Website veröffentlicht und treten mit sofortiger Wirkung in Kraft.</p>
+                    
+                        <h3>8. Kontakt</h3>
+                        <p>Bei Fragen zu diesen AGB können Sie uns unter folgender E-Mail-Adresse kontaktieren:</p>
+                        <p><a href="mailto:supportbuth@skllotterie.com">supportbuth@skllotterie.com</a></p>
+                    
+                        <p>Stand: März 2025</p>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-logo">
+                    <a href="/">
+                        <img src="images/BUTH-Light-LOGO.png" alt="BUTH Logo">
+                    </a>
+                </div>
+                <div class="skl-links">
+                    <ul>
+                        <li>
+                            <a href="terms.html">Allgemeine Geschäftsbedingungen</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Datenschutzerklärung</a>
+                        </li>
+                        <li>
+                            <a href="cookie.html">Cookie-Richtlinie</a>
+                        </li>
+                        <li>
+                            <a href="responsible-gaming.html">Verantwortungsbewusstes Spielen</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-brands-flex">
+                    <div class="footer-brand-context">
+                        <ul>
+                            <li>
+                                <img src="images/verantwortung-footer-img.png" alt="">
+                                <p>Glück mit staatlicher Garantie. Die GKL Gemeinsame Klassenlotterie der Länder – Veranstalter der NKL und SKL Lotterien – sowie die Staatliche Lotterie Einnahme Neugebauer OHG besitzen die gemäß Glücksspielrecht erforderlichen Veranstalter- und Vermittlerlizenzen und unterliegen der staatlichen und nationalen Aufsicht durch die Gemeinsame Glücksspielbehörde der Länder. Weitere Informationen</p>
+                            </li>
+                            <li>
+                                <img src="images/verantwortung-footer-img-2.png" alt="">
+                                <p>Spielen Sie verantwortungsvoll. Wenn das Spielen zum Problem wird, sind wir für Sie da. Hilfe erhalten Sie unter buwei.de oder telefonisch unter 0800 6552255 (NKL) und 0800 2468135 (SKL). Die Teilnahme am Spiel ist ab 18 Jahren erlaubt.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="brand-logos-flex">
+                        <ul>
+                            <li>
+                                <a href="https://www.tuev-nord.de/de/unternehmen" target="_blank">
+                                    <img src="images/tuev.png" alt="tuev">
+                                </a>
+                            </li>
+                            <li>
+                                <img src="images/X5B281EB3EE2067BF488AF7C42019A7A.png">
+                            </li>
+                            <li>
+                                <a href="https://gluecksspiel-behoerde.de/de/" target="_blank">
+                                    <img src="images/ggl-siegel.png" alt="GGL">
+                                </a>
+                            </li>
+                        </ul>
+                        <div>
+                            <img src="images/payment.png" alt="Zahlungen">
+                        </div>
+                    </div>
+                </div>
+                <div class="skl-copyright">
+                    <p>@2025 BUTH Staatliche Lotterie Einnahme || Alle Rechte vorbehalten</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('active');
+            });
+
+            document.getElementById('close-btn').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('active');
+            });
+        </script>
+    </body>
+</html>
