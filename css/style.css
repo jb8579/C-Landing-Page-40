@@ -477,12 +477,17 @@ footer{
     border: 1px solid #FEFEFE;
     margin-bottom: 15px;
     padding: 20px;
-    color: #FFF;
+    color: #f0f0f0;
     font-family: "Source Sans 3";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; 
+}
+.footer-brand-context > ul > li > p > a{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17px;
 }
 .footer-brand-context > ul > li > img{
     width: 90px;
